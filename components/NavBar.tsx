@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const recycleImage =
-  "https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png";
+const recycleImage = 'https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png'
 
 export default function Navbar({}) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -39,10 +38,11 @@ export default function Navbar({}) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <Link href="/about">
-                  <a className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75">
-                    <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i>
-                    <span className="ml-2">About</span>
-                  </a>
+                    <a
+                      className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
+                    >
+                      <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">About</span>
+                    </a>
                 </Link>
               </li>
             </ul>
