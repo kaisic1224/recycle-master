@@ -3,7 +3,7 @@ import cohere from "cohere-ai";
 cohere.init(process.env.API_KEY!, "2021-11-08");
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  let question = req.body.question ?? "where plastic forks";
+  let question = req.body.question;
   if (question.indexOf("?") === -1) {
     question += "?";
   }
@@ -20,13 +20,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         { text: "broken bamboo?", label: "Yard Waste" },
         { text: "old scooter?", label: "Not Accepted" },
         { text: "pool blanket?", label: "Drop off depot" },
-        { text: "dirty pizza box?", label: "Green Bin" }
+        { text: "dirty pizza box?", label: "Green Bin" },
+        { text: "broken window?", label: "Garbage Bin" },
+        { text: "soiled clothes?", label: "Garbage Bin" }
       ]
     }
   );
 
   const data = response.body.classifications;
-  console.log(data);
 
   return res.status(200).json(data);
 };
