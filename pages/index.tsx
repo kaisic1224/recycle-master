@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useSession, signIn, signOut } from "next-auth/react";
-
 import NavBar from "../components/NavBar";
 import ChatWindow from "../components/ChatWindow";
 import { MotionConfig } from "framer-motion";
@@ -20,6 +19,7 @@ const vars2 = {
       staggerChildren: 0.1}
     }
 }
+
 
 const Home: NextPage = () => {
   const start = "Get Started".split("");
