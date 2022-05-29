@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const recycleImage = 'https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png'
@@ -6,7 +7,7 @@ export default function Navbar({}) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gradient-to-r from-lime-500 to-lime-400 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gradient-to-r from-lime-500 to-lime-400">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex">
@@ -14,7 +15,7 @@ export default function Navbar({}) {
                 <a
                 className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 >
-                Recycle Master
+                Recycle Now
                 </a>
                 <a href='/' className="hover:opacity-75">
                     <img src={recycleImage} width='50' height='50'></img>
@@ -38,12 +39,13 @@ export default function Navbar({}) {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">About</span>
-                </a>
+                <Link href="/about">
+                    <a
+                      className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
+                    >
+                      <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">About</span>
+                    </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a
