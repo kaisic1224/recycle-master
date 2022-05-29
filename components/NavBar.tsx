@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-const recycleImage = 'https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png'
+const recycleImage =
+  "https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-twotone-light-green.png";
 
 export default function Navbar({}) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -11,16 +12,12 @@ export default function Navbar({}) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex">
-                
-                <a
-                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-                >
+              <a className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">
                 Recycle Now
-                </a>
-                <a href='/' className="hover:opacity-75">
-                    <img src={recycleImage} width='50' height='50'></img>
-                </a>
-                
+              </a>
+              <a href="/" className="hover:opacity-75">
+                <img src={recycleImage} width="50" height="50"></img>
+              </a>
             </div>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -40,19 +37,19 @@ export default function Navbar({}) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <Link href="/about">
-                    <a
-                      className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
-                    >
-                      <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">About</span>
-                    </a>
+                  <a className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75">
+                    <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i>
+                    <span className="ml-2">About</span>
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
+                  href="/profile"
                 >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Profile</span>
+                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i>
+                  <span className="ml-2">Profile</span>
                 </a>
               </li>
             </ul>
