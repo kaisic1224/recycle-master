@@ -8,16 +8,16 @@ const signin = () => {
       <Head>
         <title>Sign In | Recycle Master</title>
       </Head>
-      <div className="text-center w-screen h-screen grid place-items-center bg-black/[0.95]">
+      <div className="text-center w-screen h-screen grid place-items-center bg-[#B2D237]">
         <div>
-          <div className="flex">
+          <div className="flex flex-col">
             <h1 className="text-white text-6xl font-bold translate-y-5 pr-4">
-              Sign in to{" "}
+              Sign in to EXPERIENCE
             </h1>
-            <h1 className="animated-text">EXPERIENCE</h1>
+            <img src="/water.gif" className="h-72 object-cover select-none"/>
           </div>
           <button
-            className="mt-10 p-4 text-2xl font-bold bg-purple-600 rounded-2xl shadow-2xl hover:bg-purple-500"
+            className="p-4 text-2xl font-bold bg-sky-500 rounded-2xl shadow-2xl hover:bg-sky-700"
             onClick={() => signIn("google", { callbackUrl: "/" })}
           >
             Sign In

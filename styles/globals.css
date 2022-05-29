@@ -18,9 +18,8 @@
 }
 
 .animated-text {
-  background-image: url(https://64.media.tumblr.com/85c0d648bbac13414daf3312ffab2050/tumblr_p2zg4w7OA71x27up2o2_640.gifv);
-  background-position-y: -2523px;
-  background-size: 200%;
+  background-image: url(https://dribbble.com/shots/1137463-Recycle-Preloader-GIF/attachments/1137463-Recycle-Preloader-GIF?mode=media);
+  background-position: center center;
   color: transparent;
   background-size: cover;
   -webkit-background-clip: text;
