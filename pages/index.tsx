@@ -3,8 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useSession, signIn, signOut } from "next-auth/react";
+
+import ChatBubble from "../components/ChatBubble";
+import SendMessage from "../components/SendMessage";
+import ChatWindow from "../components/ChatWindow";
+
 import NavBar from "../components/NavBar";
 import ChatWindow from "../components/ChatWindow";
+
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
@@ -23,6 +29,8 @@ const Home: NextPage = () => {
         <div className="bg-lime-100 h-screen pt-8">
           <ChatWindow />
         </div>
+
+ 
     </>
   );
 };
