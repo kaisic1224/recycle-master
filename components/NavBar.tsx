@@ -11,16 +11,14 @@ export default function Navbar({}) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex">
-                
-                <a
-                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                <a href="/" 
+                className="flex text-xl font-bold leading-relaxed mr-4 whitespace-nowrap text-white hover:opacity-75"
                 >
-                Recycle Now
+                <div className="translate-y-1 pr-3">
+                  Recycle Now
+                </div>
+                <img src={recycleImage} width='50' height='50' className ="object-cover"></img>
                 </a>
-                <a href='/' className="hover:opacity-75">
-                    <img src={recycleImage} width='50' height='50'></img>
-                </a>
-                
             </div>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -46,14 +44,6 @@ export default function Navbar({}) {
                       <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">About</span>
                     </a>
                 </Link>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Profile</span>
-                </a>
               </li>
             </ul>
           </div>

@@ -15,7 +15,7 @@ const ChatWindow = () => {
   const { data: session } = useSession();
   return (
     <>
-      <div className="max-w-6xl mx-auto bg-slate-200">
+      <div className="max-w-4xl mx-auto mr-24 bg-emerald-300 rounded-2xl">
         <ul className="max-h-[700px] min-h-[700px] overflow-y-auto">
           {messages.length != 0 &&
             messages.map((msg) => {
@@ -27,7 +27,7 @@ const ChatWindow = () => {
             })}
         </ul>
       </div>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto mr-24">
         <SendMessage messages={messages} setMessages={setMessages} />
       </div>
     </>
