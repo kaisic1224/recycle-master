@@ -56,12 +56,14 @@ const SendMessage = ({
         required
         placeholder='Ask a question...'
         className={`resize-none pb-2 pt-6 leading-5 outline-none w-full rounded-xl pr-8 text-xl pl-4 max-h-max bg-blue-100 hover:bg-blue-200 focus:bg-blue-200 p-2 ${
-          loading ? "cursor-not-allowed" : "cursor-auto"
+          loading ? "cursor-not-allowed bg-blue-200" : "cursor-auto"
         }`}
       />
       <label
         htmlFor='send-btn'
-        className='absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer'
+        className={`absolute right-6 p-2 top-1/2 -translate-y-1/2 cursor-pointer ${
+          loading && "pointer-events-none"
+        }`}
       >
         <FaPaperPlane />
       </label>
